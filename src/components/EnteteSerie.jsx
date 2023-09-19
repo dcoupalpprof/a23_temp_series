@@ -28,7 +28,7 @@ const EnteteSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, hand
       status = "Terminée";
   }
   ; return (
-    <header>
+    <header className="fondPale">
       <div className="entete">
         <h1>{titre}</h1>
         <p><em>{slogan}</em></p>

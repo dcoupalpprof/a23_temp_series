@@ -8,36 +8,41 @@
 
 body {
     font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-    --blanc: #ffffff;
-    --rouge: #d62728;
-    --grisPale: #dddddd;
-    --grisFonce: #666666;
-    --noir: #414042;
+    font-family: 'Roboto Mono', monospace;
+    --border: 1px solid var(--grisFonce);
+    --blanc: #f0f6fc;
+    --couleur: #79c0ff;
+    --grisPale: #c9d1d9;
+    --grisFonce: #7d8590;
+    --grisFonceTransparent: hsl(215, 8%, 53%, 0.25);
+    --noir: #151a24;
     background: var(--noir);
     color: var(--blanc);
-
 }
 
 a {
-    color: var(--rouge);
+    color: var(--couleur);
+    display: block;
     text-decoration: none;
-    transition: 0.5s color;
     word-wrap: break-word;
 }
 
 a:hover {
-    color: var(--grisPale);
+    text-decoration: underline;
 }
 
-.premiereMajuscule {
-    text-transform: capitalize;
+.fondPale{
+    background-color: var(--grisFonceTransparent);
+}
+
+.grisPale {
+    color: var(--grisPale);
 }
 
 .majuscule {
     text-transform: uppercase;
 }
 
-.grisPale {
-    color: var(--grisPale);
+.premiereMajuscule {
+    text-transform: capitalize;
 }

@@ -8,10 +8,12 @@ const ListeSeries = ({ listeSeries, selectionnee, setListeSelectionnee, estFavor
             {
                 listeSeries.map((s) => (
                     <div key={s.id} className={selectionnee === s.id ? "on" : "off"} onClick={() => setListeSelectionnee(s.id)}>
-                        <h2>{s.title}</h2>
-                        <p>{s.year}</p>
-                        <a href={s.imdb}>{s.imdb}</a>
                         <img src={s.poster} className="imgAffiche" />
+                        <div>
+                            <h2>{s.title}</h2>
+                            <p>{s.year}</p>
+                            <a href={s.imdb}>IMDB</a>
+                        </div>
                     </div>
                 ))
             }
@@ -27,10 +29,12 @@ const ListeSeries = ({ listeSeries, selectionnee, setListeSelectionnee, estFavor
             {
                 listeFavoris.map((s) => (
                     <div key={s.id} className={selectionnee === s.id ? "on" : "off"} onClick={() => setListeSelectionnee(s.id)}>
-                        <h2>{s.title}</h2>
-                        <p>{s.year}</p>
-                        <a href={s.imdb}>{s.imdb}</a>
                         <img src={s.poster} className="imgAffiche" />
+                        <div>
+                            <h2>{s.title}</h2>
+                            <p>{s.year}</p>
+                            <a href={s.imdb}>IMBD</a>
+                        </div>
                     </div>
                 ))
             }

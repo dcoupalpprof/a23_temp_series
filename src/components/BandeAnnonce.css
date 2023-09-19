@@ -1,4 +1,12 @@
 iframe {
-    width: 100%;
-    height: 250px;
+    border: none;
+    width: 640px;
+    height: 360px;
+}
+
+@media only screen and (max-width: 760px) {
+    iframe {
+        width: 426px;
+        height: 240px;
+    }
 }

@@ -8,7 +8,7 @@ const RatingSerie = ({ rating, estCliquable }) => {
         const hover = rating / 2;
         return (
             <div className='rating'>
-                <h4>Classement global</h4>
+                <h3>Classement global</h3>
                 <div>
                     {[...Array(5)].map((etoile, i) => {
                         i += 1;
@@ -32,7 +32,7 @@ const RatingSerie = ({ rating, estCliquable }) => {
         const [hover, setHover] = useState(0);
         return (
             <div className="rating">
-                <h4>Classement personnel</h4>
+                <h3>Classement personnel</h3>
                 <div>
                     {[...Array(5)].map((etoile, i) => {
                         i += 1;

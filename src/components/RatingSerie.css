@@ -1,28 +1,12 @@
-.rating {
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    padding-bottom: 1em;
-    padding-right: 2em;
-}
-
-.rating div {
-    display: flex;
-}
-
-h4 {
-    text-align: right;
-}
-
-.rating div p {
-    padding-left: 1em;
-}
-
-.rating button {
-    background-color: transparent;
+.infosSerie .rating button {
+    background: none;
     border: none;
-    outline: none;
-    transition: 0.5s color;
+    font-size: 1em;
+    padding: 0px;
+}
+
+.infosSerie .rating div {
+    padding: 0px;
 }
 
 .rating .on {

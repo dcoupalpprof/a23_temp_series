@@ -1,29 +1,28 @@
-.listeSeries div {
-    background-color: var(--grisPale);
-    border: 5px solid var(--grisFonce);
-    border-radius: 1em;
-    box-shadow: 0px 5px 1em black;
+.listeSeries>div {
+    background-color: var(--noir);
+    border: var(--border);
+    border-radius: 5px;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 1em;
-    padding: 1em 1em 0em;
+    padding: 1em;
+    ;
+}
+
+.listeSeries>div>div {
+    margin-left: 1em;
 }
 
 .listeSeries .on {
-    background-color: var(--rouge);
+    background-color: var(--grisFonceTransparent);
 }
 
 .listeSeries h2,
 .listeSeries p,
 .listeSeries a {
-    color: var(--noir);
-    margin-bottom: 0.5em;
-    text-align: center;
+    padding: 0.25em;
 }
 
 .listeSeries img {
-    margin-bottom: 1em;
-    width: 35%;
+    width: 25%;
 }

@@ -3,36 +3,37 @@
     position: relative;
 }
 
-.saisons h2 {
-    padding-bottom: 1em;
+.saisons * {
+    padding: 0.25em;
+}
+
+.saisons div {
+    padding: 0em;
 }
 
 .saisons button {
-    background-color: var(--noir);
-    border: 2px solid var(--grisFonce);
-    border-radius: 50%;
-    box-shadow: 0px 5px 1em black;
-    color: var(--grisFonce);
-    transition: 0.5s color;
+    background: none;
+    border: none;
+    color: var(--couleur);
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 3em;
     height: 50px;
     width: 50px;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 0px;
 }
 
 .saisons button:hover {
-    color: var(--rouge);
+    color: var(--blanc);
 }
 
 .saisons .on:after {
     content: "-";
-    padding-bottom: 5px;
+}
+
+.saisons .on {
+    top: -5px;
 }
 
 .saisons .off:after {
