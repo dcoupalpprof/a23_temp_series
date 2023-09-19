@@ -1,0 +1,31 @@
+.favori button {
+    background-color: var(--noir);
+    border: 2px solid var(--grisFonce);
+    border-radius: 50%;
+    box-shadow: 0px 5px 1em black;
+    cursor: pointer;
+    font-size: 2em;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.favori .on {
+    color: var(--rouge);
+    transition: 0.5s color;
+}
+
+.favori .off {
+    color: var(--grisFonce);
+    transition: 0.5s color;
+}
+
+.favori .on:hover {
+    color: var(--grisFonce);
+}
+
+.favori .off:hover {
+    color: var(--rouge);
+}

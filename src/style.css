@@ -1,0 +1,43 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    --blanc: #ffffff;
+    --rouge: #d62728;
+    --grisPale: #dddddd;
+    --grisFonce: #666666;
+    --noir: #414042;
+    background: var(--noir);
+    color: var(--blanc);
+
+}
+
+a {
+    color: var(--rouge);
+    text-decoration: none;
+    transition: 0.5s color;
+    word-wrap: break-word;
+}
+
+a:hover {
+    color: var(--grisPale);
+}
+
+.premiereMajuscule {
+    text-transform: capitalize;
+}
+
+.majuscule {
+    text-transform: uppercase;
+}
+
+.grisPale {
+    color: var(--grisPale);
+}

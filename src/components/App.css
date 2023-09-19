@@ -1,0 +1,10 @@
+.listeSeries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 2em;
+    margin-top: 0em;
+}
+
+h1{
+    text-align: center;
+}

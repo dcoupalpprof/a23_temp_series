@@ -1,0 +1,15 @@
+.ratings{
+    position: absolute;
+    right: 0;
+    top: 29px;
+    width: 35%;
+}
+
+.infosSerie {
+    width: 65%;
+}
+
+.separation {
+    border-bottom: 1px solid var(--grisFonce);
+    padding: 1em;
+}
