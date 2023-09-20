@@ -19,7 +19,7 @@ const Nav = ({ liens, profil, handleSubmit, favoris }) => {
         )}
       </ul>
       <Profil profil={profil} favoris={favoris}></Profil>
-      <button className='deconnexion' onClick={() => handleSubmit(profilDeconnecte)}>Déconnexion</button>
+      <button className='deconnexion' onClick={() => handleSubmit(profilDeconnecte, true)}>Déconnexion</button>
     </nav >
   );
 };

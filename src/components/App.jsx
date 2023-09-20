@@ -27,14 +27,16 @@ const App = () => {
         mdp: "",
         seriesAimees: favoris.length
     });
-    function handleSubmit(newProfil) {
-        setProfil(profil => {
-            return {
-                ...profil,
-                nom: newProfil.nom,
-                mdp: newProfil.mdp
-            };
-        });
+    function handleSubmit(newProfil, deconnexion) {
+        if(newProfil.mdp || deconnexion){
+            setProfil(profil => {
+                return {
+                    ...profil,
+                    nom: newProfil.nom,
+                    mdp: newProfil.mdp,
+                };
+            });
+        }
     }
     const routesAuthentifiees = [
         {
@@ -94,7 +96,7 @@ const App = () => {
             element: <Navigate to="/login" replace />,
         }
     ];
-    return <RouterProvider router={createBrowserRouter(profil.nom.trim() !== "" && profil.mdp.trim() !== "" ? routesAuthentifiees : routes)} />;
+    return <RouterProvider router={createBrowserRouter(!!profil.nom ? routesAuthentifiees : routes)} />;
 };
 
 export default App;

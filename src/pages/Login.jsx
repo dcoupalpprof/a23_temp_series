@@ -47,7 +47,7 @@ const Login = ({ profil, setProfil, handleSubmit }) => {
                     />
                 </div>
                 <div>
-                    <button type='submit' onClick={() => handleSubmit(newProfil)}>Envoyer</button>
+                    <button type='submit' onClick={() => handleSubmit(newProfil, false)}>Envoyer</button>
                 </div>
             </div>
         </div>
