@@ -11,7 +11,7 @@ describe("Navigation", () => {
         cy.get("[data-cy='input_nom']").type("Viviane");
         cy.get("[data-cy='input_mdp']").type("Dubuc");
         cy.get(".login button").click();
-        cy.url().should("include", "/trending/");
+        cy.url().should("include", "trending");
     });
 
     it("Favorites", () => {
@@ -20,7 +20,7 @@ describe("Navigation", () => {
         cy.get("[data-cy='input_mdp']").type("Dubuc");
         cy.get(".login button").click();
         cy.get("[data-cy='lien_Favoris']").click();
-        cy.url().should("include", "/favorites/");
+        cy.url().should("include", "favorites");
     });
 
     it("Trending - DetailsSerie", () => {
@@ -28,69 +28,72 @@ describe("Navigation", () => {
         cy.get("[data-cy='input_nom']").type("Viviane");
         cy.get("[data-cy='input_mdp']").type("Dubuc");
         cy.get(".login button").click();
-        cy.get("[data-cy='lien_details]").click();
-        cy.get("h1").should("have.text", "Ahsoka");
+        cy.get(".lien_details").first().click();
+        cy.get("main h1").should("have.text", "Ahsoka");
     });
 
-    // it("Favorites - DetailsSerie", () => {
-    //     cy.visit("/");
-    //     cy.get("[data-cy='input_nom']").type("Viviane");
-    //     cy.get("[data-cy='input_mdp']").type("Dubuc");
-    //     cy.get(".login button").click();
-    // cy.get("[data-cy='lien_Favoris']").click();
-    //     cy.get(".listeSeries a").click();
-    //     cy.get("h1").should("have.text", "Ahsoka");
-    // });
+    it("Favorites - DetailsSerie", () => {
+        cy.visit("/");
+        cy.get("[data-cy='input_nom']").type("Viviane");
+        cy.get("[data-cy='input_mdp']").type("Dubuc");
+        cy.get(".login button").click();
+        cy.get(".lien_details").first().click();
+        cy.get(".favori button").click();
+        cy.get("[data-cy='lien_Favoris']").click();
+        cy.get(".lien_details").first().click();
+        cy.get("main h1").should("have.text", "Ahsoka");
+    });
 });
 
 describe("Authentification", () => {
     it("Inputs vides", () => {
         cy.visit("/");
         cy.get(".login button").click();
-        cy.url().should("include", "/login/");
+        cy.url().should("include", "login");
     });
 
     it("Input MDP vide seulement", () => {
         cy.visit("/");
         cy.get("[data-cy='input_nom']").type("Viviane");
         cy.get(".login button").click();
-        cy.url().should("include", "/login/");
+        cy.url().should("include", "login");
     });
-    
+
     it("Input nom vide seulement", () => {
         cy.visit("/");
         cy.get("[data-cy='input_mdp']").type("Dubuc");
         cy.get(".login button").click();
-        cy.url().should("include", "/login/");
+        cy.url().should("include", "login");
     });
-    
+
     it("Déconnexion", () => {
         cy.visit("/");
         cy.get("[data-cy='input_nom']").type("Viviane");
         cy.get("[data-cy='input_mdp']").type("Dubuc");
         cy.get(".login button").click();
-        cy.get(".profil button").click();
-        cy.url().should("include", "/login/");
+        cy.get(".deconnexion").click();
+        cy.url().should("include", "login");
     });
 
-    // it("Affichage nom", () => {
-    //     cy.visit("/");
-    //     cy.get("[data-cy='input_nom']").type("Viviane");
-    //     cy.get("[data-cy='input_mdp']").type("Dubuc");
-    //     cy.get(".login button").click();
-    //     cy.get(".profil h1").should("have.text", "Viviane");
-    // });
+    it("Affichage nom", () => {
+        cy.visit("/");
+        cy.get("[data-cy='input_nom']").type("Viviane");
+        cy.get("[data-cy='input_mdp']").type("Dubuc");
+        cy.get(".login button").click();
+        cy.get(".profil h1").should("have.text", "Viviane");
+    });
 });
 
 describe("Fonctionnalités", () => {
-    // it("Favoris", () => {
-    //     cy.visit("/");
-    //     cy.get("[data-cy='input_nom']").type("Viviane");
-    //     cy.get("[data-cy='input_mdp']").type("Dubuc");
-    //     cy.get(".login button").click();
-    //     cy.get("[data-cy='lien_details]").click();
-    //     cy.get(".favori button").click();
-    //     cy.get("[data-cy='lien_Favoris']").click();
-    //     cy.get(".listesSerie .on h2").should("have.text", "Ahsoka");
-    // });
+    it("Favoris", () => {
+        cy.visit("/");
+        cy.get("[data-cy='input_nom']").type("Viviane");
+        cy.get("[data-cy='input_mdp']").type("Dubuc");
+        cy.get(".login button").click();
+        cy.get(".lien_details").first().click();
+        cy.get(".favori button").click();
+        cy.get("[data-cy='lien_Favoris']").click();
+        cy.get(".lien_details").first().click();
+        cy.get(".favori button").should("have.class", "on");
+    });
 });

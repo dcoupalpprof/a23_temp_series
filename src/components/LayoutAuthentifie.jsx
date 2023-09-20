@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
-const LayoutAuthentifie = ({profil, handleDisconnect}) => {
+const LayoutAuthentifie = ({profil, handleSubmit, favoris}) => {
     return (
         <>
             <Nav
@@ -11,7 +11,8 @@ const LayoutAuthentifie = ({profil, handleDisconnect}) => {
                     { nom: "Favoris", url: "/favorites" },
                 ]}
                 profil={profil}
-                handleDisconnect={handleDisconnect}
+                handleSubmit={handleSubmit}
+                favoris={favoris}
             />
             <main>
                 <Outlet></Outlet>

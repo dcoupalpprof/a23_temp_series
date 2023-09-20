@@ -17,7 +17,7 @@ const Trending = ({ listeSeries }) => {
                                 <h2>{title}</h2>
                                 <p>{year}</p>
                                 <a href={imdb}>IMDB</a>
-                                <Link data-cy="lien_details" to={`/trending/${id}`}>Détails</Link>
+                                <Link className="lien_details" to={`/trending/${id}`}>Détails</Link>
                             </div>
                         </div>
                     ))

@@ -10,13 +10,7 @@ const App = () => {
     const [favoris, setFavoris] = useState([]);
     const rand = Math.round(1 + Math.random() * (5 - 1));
     const photoProfil = "/img/photoProfil" + rand + ".jpg";
-    const [profil, setProfil] = useState({
-        photo: photoProfil,
-        nom: "",
-        mdp: "",
-        seriesAimees: favoris.length
-    });
-    //Ne fonctionne plus? :(
+    //Fait l'inverse? :(
     const handleFavoriClick = (e) => {
         if (favoris.includes(e.serie.id)) {
             setFavoris(favoris => favoris.filter((f) => {
@@ -27,16 +21,25 @@ const App = () => {
             setFavoris(favoris => [...favoris, e.serie.id]);
         }
     }
-    function handleConnect() {
-        setEstAuthentifie(routesAuthentifiees);
-    }
-    function handleDisconnect() {
-        setEstAuthentifie(routes);
+    const [profil, setProfil] = useState({
+        photo: photoProfil,
+        nom: "",
+        mdp: "",
+        seriesAimees: favoris.length
+    });
+    function handleSubmit(newProfil) {
+        setProfil(profil => {
+            return {
+                ...profil,
+                nom: newProfil.nom,
+                mdp: newProfil.mdp
+            };
+        });
     }
     const routesAuthentifiees = [
         {
             path: '',
-            element: <LayoutAuthentifie profil={profil} handleDisconnect={handleDisconnect} />,
+            element: <LayoutAuthentifie profil={profil} handleSubmit={handleSubmit} favoris={favoris} />,
             children: [
                 {
                     index: true,
@@ -48,7 +51,7 @@ const App = () => {
                     children: [
                         {
                             path: ':id',
-                            element: <DetailsSerie handleFavoriClick={handleFavoriClick} favoris={favoris} />,
+                            element: <DetailsSerie favoris={favoris} handleFavoriClick={handleFavoriClick} />,
                             errorElement: <Navigate to="/trending" replace />
                         },
                     ]
@@ -59,7 +62,7 @@ const App = () => {
                     children: [
                         {
                             path: ':id',
-                            element: <DetailsSerie handleFavoriClick={handleFavoriClick} favoris={favoris} />,
+                            element: <DetailsSerie favoris={favoris} handleFavoriClick={handleFavoriClick} />,
                             errorElement: <Navigate to="/favorites" replace />
                         },
                     ]
@@ -82,7 +85,7 @@ const App = () => {
                 },
                 {
                     path: 'login',
-                    element: <Login profil={profil} setProfil={setProfil} handleConnect={handleConnect} />
+                    element: <Login profil={profil} setProfil={setProfil} handleSubmit={handleSubmit} />
                 },
             ]
         },
@@ -91,8 +94,7 @@ const App = () => {
             element: <Navigate to="/login" replace />,
         }
     ];
-    const [estAuthentifie, setEstAuthentifie] = useState(routes);
-    return <RouterProvider router={createBrowserRouter(estAuthentifie)} />;
+    return <RouterProvider router={createBrowserRouter(profil.nom.trim() !== "" && profil.mdp.trim() !== "" ? routesAuthentifiees : routes)} />;
 };
 
 export default App;

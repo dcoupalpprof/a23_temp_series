@@ -23,7 +23,7 @@ const Favorites = ({ listeSeries, favoris }) => {
                                 <h2>{title}</h2>
                                 <p>{year}</p>
                                 <a href={imdb}>IMDB</a>
-                                <Link to={`/favorites/${id}`}>Détails</Link>
+                                <Link className="lien_details" to={`/favorites/${id}`}>Détails</Link>
                             </div>
                         </div>
                     ))

@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import Profil from "./Profil";
 import "./Nav.css";
 
-const Nav = ({ liens, profil, handleDisconnect }) => {
-  const {pathname} = useLocation();
+const Nav = ({ liens, profil, handleSubmit, favoris }) => {
+  const { pathname } = useLocation();
+  let profilDeconnecte = {
+    nom: "",
+    mdp: "",
+  }
   return (
     <nav>
       <ul>
@@ -14,8 +18,8 @@ const Nav = ({ liens, profil, handleDisconnect }) => {
           </li>
         )}
       </ul>
-      <Profil profil={profil}></Profil>
-      <button onClick={() => handleDisconnect()}>Déconnexion</button>
+      <Profil profil={profil} favoris={favoris}></Profil>
+      <button className='deconnexion' onClick={() => handleSubmit(profilDeconnecte)}>Déconnexion</button>
     </nav >
   );
 };

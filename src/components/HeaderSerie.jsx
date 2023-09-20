@@ -1,7 +1,7 @@
 import Affiche from "./Affiche";
 import "./HeaderSerie.css";
 
-const HeaderSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, handleFavoriClick, favoris }) => {
+const HeaderSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, favoris, handleFavoriClick }) => {
   switch (status) {
     case "returning series":
       status = "Série de retour";
@@ -34,7 +34,7 @@ const HeaderSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, hand
         <p><em>{slogan}</em></p>
         <p className="grisPale"><span className="majuscule">{reseau} . {pays}</span> . {status}</p>
       </div>
-      <Affiche affiche={affiche} serie={serie} handleFavoriClick={handleFavoriClick} favoris={favoris} />
+      <Affiche affiche={affiche} serie={serie} favoris={favoris} handleFavoriClick={handleFavoriClick} />
     </header>
   );
 };
