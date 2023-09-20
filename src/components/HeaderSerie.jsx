@@ -1,7 +1,7 @@
 import Affiche from "./Affiche";
-import "./EnteteSerie.css";
+import "./HeaderSerie.css";
 
-const EnteteSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, handleFavoriClick, mesFavoris }) => {
+const HeaderSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, handleFavoriClick, favoris }) => {
   switch (status) {
     case "returning series":
       status = "Série de retour";
@@ -34,9 +34,9 @@ const EnteteSerie = ({ titre, slogan, reseau, pays, status, affiche, serie, hand
         <p><em>{slogan}</em></p>
         <p className="grisPale"><span className="majuscule">{reseau} . {pays}</span> . {status}</p>
       </div>
-      <Affiche affiche={affiche} serie={serie} handleFavoriClick={handleFavoriClick} mesFavoris={mesFavoris} />
+      <Affiche affiche={affiche} serie={serie} handleFavoriClick={handleFavoriClick} favoris={favoris} />
     </header>
   );
 };
 
-export default EnteteSerie;
+export default HeaderSerie;

@@ -1,12 +1,12 @@
-.infosSerie>div {
+.info>div {
     border-bottom: var(--border);
     padding: 1em;
 }
 
-.infosSerie>div * {
+.info>div * {
     padding: 0.25em;
 }
 
-.infosSerie>div ul {
+.info>div ul {
     padding-left: 2em;
 }

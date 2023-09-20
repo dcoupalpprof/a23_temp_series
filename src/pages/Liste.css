@@ -1,12 +1,14 @@
+.listeSeries{
+    padding-bottom: 100px;
+}
+
 .listeSeries>div {
     background-color: var(--noir);
     border: var(--border);
     border-radius: 5px;
-    cursor: pointer;
     display: flex;
     margin: 1em;
     padding: 1em;
-    ;
 }
 
 .listeSeries>div>div {

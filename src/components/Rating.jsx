@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import "./RatingSerie.css";
+import "./Rating.css";
 
 // Code inspiré de https://dev.to/michaelburrows/create-a-custom-react-star-rating-component-5o6
 
-const RatingSerie = ({ rating, estCliquable }) => {
+const Rating = ({ rating, estCliquable }) => {
     if (!estCliquable) {
         const hover = rating / 2;
         return (
@@ -57,4 +57,4 @@ const RatingSerie = ({ rating, estCliquable }) => {
         );
     }
 };
-export default RatingSerie;
+export default Rating;

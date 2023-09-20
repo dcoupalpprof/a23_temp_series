@@ -1,10 +1,10 @@
-import FavoriSerie from "./FavoriSerie";
+import Favori from "./Favori";
 import "./Affiche.css";
 
-const Affiche = ({ affiche, serie, handleFavoriClick, mesFavoris }) => (
+const Affiche = ({ affiche, serie, handleFavoriClick, favoris }) => (
     <div className="affiche">
         <img src={affiche} className="imgAffiche" />
-        <FavoriSerie serie={serie} handleFavoriClick={handleFavoriClick} mesFavoris={mesFavoris} />
+        <Favori serie={serie} handleFavoriClick={handleFavoriClick} favoris={favoris} />
     </div>
 );
 

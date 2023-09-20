@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Saison from "./Saison";
-import "./SaisonsSerie.css";
+import "./Saisons.css";
 
-const SaisonsSerie = ({ saisons }) => {
+const Saisons = ({ saisons }) => {
     const [estAffiche, setEstAffiche] = useState(false);
         return (
         <section className="saisons">
@@ -17,4 +17,4 @@ const SaisonsSerie = ({ saisons }) => {
     );
 };
 
-export default SaisonsSerie;
+export default Saisons;

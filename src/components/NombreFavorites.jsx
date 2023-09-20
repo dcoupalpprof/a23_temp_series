@@ -1,6 +1,7 @@
 import { MdFavorite } from 'react-icons/md';
-const SeriesFavorites = ({ seriesAimees }) => {
+
+const NombreFavorites = ({ seriesAimees }) => {
     return <p>{seriesAimees} séries {MdFavorite}</p>
 }
 
-export default SeriesFavorites;
+export default NombreFavorites;

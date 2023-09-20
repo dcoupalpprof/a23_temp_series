@@ -1,11 +1,11 @@
-.infosSerie .rating button {
+.info .rating button {
     background: none;
     border: none;
     font-size: 1em;
     padding: 0px;
 }
 
-.infosSerie .rating div {
+.info .rating div {
     padding: 0px;
 }
 

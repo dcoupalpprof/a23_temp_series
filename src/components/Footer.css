@@ -1,0 +1,11 @@
+footer{
+    background-color: var(--grisFonce);
+    border-top: var(--border);
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}

@@ -1,9 +1,9 @@
 import BandeAnnonce from "./BandeAnnonce";
-import RatingSerie from "./RatingSerie";
-import "./InfosSerie.css";
+import Rating from "./Rating";
+import "./Info.css";
 
-const InfosSerie = ({ annee, imdb, synopsis, bandeAnnonce, rating, votes, langue, genres }) => (
-    <section className="infosSerie">
+const Info = ({ annee, imdb, synopsis, bandeAnnonce, rating, votes, langue, genres }) => (
+    <section className="info">
         <div>
             <h2>Synopsis</h2>
             <p><em>{synopsis}</em></p>
@@ -18,8 +18,8 @@ const InfosSerie = ({ annee, imdb, synopsis, bandeAnnonce, rating, votes, langue
             </ul>
         </div>
         <div>
-            <RatingSerie rating={rating} votes={votes} estCliquable={false}></RatingSerie>
-            <RatingSerie rating={rating} votes={votes} estCliquable={true}></RatingSerie>
+            <Rating rating={rating} votes={votes} estCliquable={false}></Rating>
+            <Rating rating={rating} votes={votes} estCliquable={true}></Rating>
         </div>
         <div className="fondPale">
             <h3>Liens externes</h3>
@@ -29,4 +29,4 @@ const InfosSerie = ({ annee, imdb, synopsis, bandeAnnonce, rating, votes, langue
     </section>
 );
 
-export default InfosSerie;
+export default Info;
