@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "./Login.css"
 
-const Login = ({ handleSubmit, profil }) => {
+const Login = ({ profil, setProfil, handleConnect }) => {
     const [newProfil, setNewProfil] = useState({
         nom: profil.nom,
         mdp: profil.mdp,
@@ -22,10 +22,23 @@ const Login = ({ handleSubmit, profil }) => {
             };
         }));
     }
+    console.log(profil);
+    function handleSubmit() {
+        if (newProfil.nom.trim() !== "" && newProfil.mdp.trim() !== "") {
+            setProfil(profil => {
+                return {
+                    ...profil,
+                    nom: newProfil.nom,
+                    mdp: newProfil.mdp
+                };
+            });
+            handleConnect();
+        }
+    }
     return (
         <div className='login'>
             <h1>Authentification</h1>
-            <form onSubmit={() => handleSubmit(newProfil)}>
+            <div className='form'>
                 <div>
                     <label>Nom d'utilisateur</label>
                     <input
@@ -47,9 +60,9 @@ const Login = ({ handleSubmit, profil }) => {
                     />
                 </div>
                 <div>
-                    <button type='submit'>Envoyer</button>
+                    <button type='submit' onClick={() => handleSubmit()}>Envoyer</button>
                 </div>
-            </form>
+            </div>
         </div>
     );
 };

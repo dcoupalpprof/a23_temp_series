@@ -27,26 +27,12 @@ const App = () => {
             setFavoris(favoris => [...favoris, e.serie.id]);
         }
     }
-    const routes = [
-        {
-            path: '',
-            element: <Layout />,
-            children: [
-                {
-                    index: true,
-                    element: <Navigate to="/login" replace />,
-                },
-                {
-                    path: 'login',
-                    element: <Login handleSubmit={handleSubmit} profil={profil} setProfil={setProfil} />
-                },
-            ]
-        },
-        {
-            path: '*',
-            element: <Navigate to="/login" replace />,
-        }
-    ];
+    function handleConnect() {
+        setEstAuthentifie(routesAuthentifiees);
+    }
+    function handleDisconnect() {
+        setEstAuthentifie(routes);
+    }
     const routesAuthentifiees = [
         {
             path: '',
@@ -85,22 +71,26 @@ const App = () => {
             element: <Navigate to="/trending" replace />,
         }
     ];
-    //Ne se met pas à jour? :(
-    function handleSubmit(newProfil) {
-        if (newProfil.nom.trim() !== "" && newProfil.mdp.trim() !== "") {
-            setProfil(profil => {
-                return {
-                    ...profil,
-                    nom: newProfil.nom,
-                    mdp: newProfil.mdp
-                };
-            });
-            setEstAuthentifie(routesAuthentifiees);
+    const routes = [
+        {
+            path: '',
+            element: <Layout />,
+            children: [
+                {
+                    index: true,
+                    element: <Navigate to="/login" replace />,
+                },
+                {
+                    path: 'login',
+                    element: <Login profil={profil} setProfil={setProfil} handleConnect={handleConnect} />
+                },
+            ]
+        },
+        {
+            path: '*',
+            element: <Navigate to="/login" replace />,
         }
-    }
-    function handleDisconnect() {
-        setEstAuthentifie(routes);
-    }
+    ];
     const [estAuthentifie, setEstAuthentifie] = useState(routes);
     return <RouterProvider router={createBrowserRouter(estAuthentifie)} />;
 };
