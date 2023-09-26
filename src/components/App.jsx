@@ -1,16 +1,15 @@
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Login, Trending, Favorites, DetailsSerie } from "../pages";
+import { Login, Trending, Recherche, Favorites, DetailsSerie } from "../pages";
 import { useState } from 'react';
-import listeSeries from "../data/series_etape2_list.json";
 import LayoutAuthentifie from "./LayoutAuthentifie";
 import Layout from "./Layout";
 import "./App.css";
 
 const App = () => {
     const [favoris, setFavoris] = useState([]);
+    const [recherche, setRecherche] = useState("");
     const rand = Math.round(1 + Math.random() * (5 - 1));
     const photoProfil = "/img/photoProfil" + rand + ".jpg";
-    //Fait l'inverse? :(
     const handleFavoriClick = (e) => {
         if (favoris.includes(e.serie.id)) {
             setFavoris(favoris => favoris.filter((f) => {
@@ -28,7 +27,7 @@ const App = () => {
         seriesAimees: favoris.length
     });
     function handleSubmit(newProfil, deconnexion) {
-        if(newProfil.mdp || deconnexion){
+        if (newProfil.mdp || deconnexion) {
             setProfil(profil => {
                 return {
                     ...profil,
@@ -38,10 +37,14 @@ const App = () => {
             });
         }
     }
+    function handleClick(inputRecherche) {
+        setRecherche(inputRecherche);
+        console.log(recherche);
+    }
     const routesAuthentifiees = [
         {
             path: '',
-            element: <LayoutAuthentifie profil={profil} handleSubmit={handleSubmit} favoris={favoris} />,
+            element: <LayoutAuthentifie profil={profil} handleSubmit={handleSubmit} favoris={favoris} handleClick={handleClick} />,
             children: [
                 {
                     index: true,
@@ -49,7 +52,7 @@ const App = () => {
                 },
                 {
                     path: 'trending',
-                    element: <Trending listeSeries={listeSeries} />,
+                    element: <Trending />,
                     children: [
                         {
                             path: ':id',
@@ -60,12 +63,23 @@ const App = () => {
                 },
                 {
                     path: 'favorites',
-                    element: <Favorites listeSeries={listeSeries} favoris={favoris} />,
+                    element: <Favorites favoris={favoris} />,
                     children: [
                         {
                             path: ':id',
                             element: <DetailsSerie favoris={favoris} handleFavoriClick={handleFavoriClick} />,
                             errorElement: <Navigate to="/favorites" replace />
+                        },
+                    ]
+                },
+                {
+                    path: 'recherche',
+                    element: <Recherche recherche={recherche} />,
+                    children: [
+                        {
+                            path: ':id',
+                            element: <DetailsSerie favoris={favoris} handleFavoriClick={handleFavoriClick} />,
+                            errorElement: <Navigate to="/recherche" replace />
                         },
                     ]
                 },

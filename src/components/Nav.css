@@ -6,17 +6,16 @@ nav {
 }
 
 nav>* {
-    padding: 1em;
+    padding: 0.25em;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    width: 30%;
 }
 
 nav a {
-    margin-right: 1em;
+    margin-right: 0.25em;
     padding: 0.5em;
     color: var(--blanc);
 }

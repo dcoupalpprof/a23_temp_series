@@ -12,7 +12,7 @@ const DetailsSerie = ({ favoris, handleFavoriClick }) => {
         const fetchSerie = async () => {
             const resp = await fetch("http://localhost:3000/api/series/" + params.id);
             const data = await resp.json();
-            setSerie(data);
+            setSerie(data.serie);
         };
         fetchSerie();
     }, [params]);

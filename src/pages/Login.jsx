@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "./Login.css"
 
-const Login = ({ profil, setProfil, handleSubmit }) => {
+const Login = ({ profil, handleSubmit }) => {
     const [newProfil, setNewProfil] = useState({
         nom: profil.nom,
         mdp: profil.mdp,
