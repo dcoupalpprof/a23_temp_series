@@ -1,13 +1,24 @@
+import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import HeaderSerie from "../components/HeaderSerie";
 import Info from "../components/Info";
 import Saisons from "../components/Saisons";
 import "./DetailsSerie.css";
-import detailsSeries from "../data/series_etape2_details.json";
 
 const DetailsSerie = ({ favoris, handleFavoriClick }) => {
     const params = useParams();
-    const serie = detailsSeries[params.id.toString()]
+    const [serie, setSerie] = useState();
+    useEffect(() => {
+        const fetchSerie = async () => {
+            const resp = await fetch("http://localhost:3000/api/series/" + params.id);
+            const data = await resp.json();
+            setSerie(data);
+        };
+        fetchSerie();
+    }, [params]);
+    if (!serie) {
+        return false;
+    }
     return (
         <div className="serie">
             <HeaderSerie titre={serie.title} slogan={serie.tagline} reseau={serie.network} pays={serie.country} status={serie.status} affiche={serie.poster} serie={serie} favoris={favoris} handleFavoriClick={handleFavoriClick} />
