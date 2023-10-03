@@ -20,7 +20,7 @@ nav a {
     color: var(--blanc);
 }
 
-nav a:hover {
+nav a:hover, nav .active a {
     background-color: var(--grisFonceTransparent);
     border-radius: 10px;
     text-decoration: none;

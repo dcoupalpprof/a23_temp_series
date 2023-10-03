@@ -21,7 +21,7 @@ const EnginRecherche = ({ handleClick }) => {
                 type="text"
                 placeholder="Recherche"
             />
-            <button type='submit' onClick={() => handleButtonClick()}>🔎︎</button>
+            <button data-cy="button_recherche" type='submit' className={inputRecherche.trim() === "" ? "off" : null} onClick={inputRecherche.trim() !== "" ? () => handleButtonClick() : null}>🔎︎</button>
         </div>
     )
 };

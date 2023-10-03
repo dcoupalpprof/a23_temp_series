@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Gen V",
+        "year": 2023,
+        "id": 196842,
+        "slug": "gen-v",
+        "imdb": "https://www.imdb.com/title/tt13159924/",
+        "poster": "https://image.tmdb.org/t/p/w500/uuot1N5AgZ7xRCKgm4ZCwOhgIJu.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/ScaVfT5IkwVC3Edhmxqyl0GbK0.jpg"
+    },
+    {
+        "title": "Sex Education",
+        "year": 2019,
+        "id": 140590,
+        "slug": "sex-education",
+        "imdb": "https://www.imdb.com/title/tt7767422/",
+        "poster": "https://image.tmdb.org/t/p/w500/esUCvhY9yiH2MS45EPlgVbjmWBD.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/jKbqVjCOOL2P8cP1VNxbC2h31Re.jpg"
+    },
+    {
+        "title": "Only Murders in the Building",
+        "year": 2021,
+        "id": 165314,
+        "slug": "only-murders-in-the-building",
+        "imdb": "https://www.imdb.com/title/tt11691774/",
+        "poster": "https://image.tmdb.org/t/p/w500/yhx6PnU3L2a6FnEFGOlBKTZ8TSD.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/9JpYfnBOu5l9oBKvIZQovOXi8sy.jpg"
+    },
+    {
+        "title": "Family Guy",
+        "year": 1999,
+        "id": 1425,
+        "slug": "family-guy",
+        "imdb": "https://www.imdb.com/title/tt0182576/",
+        "poster": "https://image.tmdb.org/t/p/w500/hw2vi8agaJZ7oeSvS8uEYgOtK32.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/wU1y7snEVYiJBpZ2k1DjIpHgJbx.jpg"
+    },
+    {
+        "title": "The Big Bang Theory",
+        "year": 2007,
+        "id": 1409,
+        "slug": "the-big-bang-theory",
+        "imdb": "https://www.imdb.com/title/tt0898266/",
+        "poster": "https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/7RySzFeK3LPVMXcPtqfZnl6u4p1.jpg"
+    },
+    {
+        "title": "Ahsoka",
+        "year": 2023,
+        "id": 170559,
+        "slug": "ahsoka",
+        "imdb": "https://www.imdb.com/title/tt13622776/",
+        "poster": "https://image.tmdb.org/t/p/w500/laCJxobHoPVaLQTKxc14Y2zV64J.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/mvoW41kdSxiobGZ9ONL1Tqrpt3h.jpg"
+    },
+    {
+        "title": "Moving",
+        "year": 2023,
+        "id": 193894,
+        "slug": "moving-2023",
+        "imdb": "https://www.imdb.com/title/tt24640580/",
+        "poster": "https://image.tmdb.org/t/p/w500/vf9SNXNAFqzKBGksFwrXhkg9cb7.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/29jWaRhKtey1efp5G7Fu97NAmzz.jpg"
+    },
+    {
+        "title": "One Piece",
+        "year": 1999,
+        "id": 37696,
+        "slug": "one-piece",
+        "imdb": "https://www.imdb.com/title/tt0388629/",
+        "poster": "https://image.tmdb.org/t/p/w500/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/4Mt7WHox67uJ1yErwTBFcV8KWgG.jpg"
+    },
+    {
+        "title": "Game of Thrones",
+        "year": 2011,
+        "id": 1390,
+        "slug": "game-of-thrones",
+        "imdb": "https://www.imdb.com/title/tt0944947/",
+        "poster": "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+    },
+    {
+        "title": "American Horror Story",
+        "year": 2011,
+        "id": 1404,
+        "slug": "american-horror-story",
+        "imdb": "https://www.imdb.com/title/tt1844624/",
+        "poster": "https://image.tmdb.org/t/p/w500/5LLG9bjq0i7V5N4UfRhnab8zHK4.jpg",
+        "backdrop": "https://image.tmdb.org/t/p/original/a4doyPOabvQor0RGkWdhVENAR3G.jpg"
+    }
+]

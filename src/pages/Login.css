@@ -1,4 +1,4 @@
-.login{
+.login {
     border: var(--border);
     border-radius: 10px;
     display: flex;
@@ -11,16 +11,17 @@
     padding-bottom: 100px;
 }
 
-.login div{
+.login div {
     display: flex;
     flex-direction: column;
 }
 
-.login div *{
+.login div * {
     padding: 0.5em;
 }
 
-input, button{
+input,
+button {
     margin: 0.25em;
     background: none;
     border: var(--border);
@@ -28,16 +29,26 @@ input, button{
     color: var(--grisFonce)
 }
 
-button{
+button {
     background-color: var(--grisFonceTransparent);
 }
 
-button:hover{
+.login button.off {
+    background: var(--noir);
+}
+
+button:hover {
     border: 1px solid var(--grisPale);
     color: var(--grisPale);
     cursor: pointer;
 }
 
-div.form{
+.login button.off:hover {
+    border: 1px solid var(--grisFonce);
+    color: var(--grisFonce);
+    cursor: default;
+}
+
+div.form {
     width: 75%;
 }

@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import "./Login.css"
 
-const Login = ({ profil, handleSubmit }) => {
+const Login = ({ handleSubmit }) => {
+    let erreur = "";
     const [newProfil, setNewProfil] = useState({
-        nom: profil.nom,
-        mdp: profil.mdp,
+        nom: "",
+        mdp: "",
     });
     function handleNomChange(event) {
         setNewProfil((current => {
@@ -22,6 +23,14 @@ const Login = ({ profil, handleSubmit }) => {
             };
         }));
     }
+    function handleErreur() {
+        if (newProfil.nom.trim() === "" && newProfil.mdp.trim() !== "") {
+            erreur = "Veuillez entrer un nom d'utilisateur pour continuer.";
+        }
+        else if (newProfil.nom.trim() !== "" && newProfil.mdp.trim() === "") {
+            erreur = "Veuillez entrer un mot de passe pour continuer.";
+        }
+    }
     return (
         <div className='login'>
             <h1>Authentification</h1>
@@ -33,6 +42,7 @@ const Login = ({ profil, handleSubmit }) => {
                         onChange={handleNomChange}
                         value={newProfil.nom}
                         type="text"
+                        autoFocus
                         placeholder="Nom d'utilisateur"
                     />
                 </div>
@@ -47,7 +57,11 @@ const Login = ({ profil, handleSubmit }) => {
                     />
                 </div>
                 <div>
-                    <button type='submit' onClick={() => handleSubmit(newProfil, false)}>Envoyer</button>
+                    <button data-cy="button_connexion" type='submit' className={newProfil.nom.trim() === "" && newProfil.mdp.trim() === "" ? "off" : null}
+                        onClick={newProfil.nom.trim() !== "" && newProfil.mdp.trim() !== "" ? () => handleSubmit(newProfil.nom, false) : handleErreur()}>Envoyer</button>
+                </div>
+                <div className={erreur.trim() === "" ? "none" : "erreur"}>
+                    {erreur}
                 </div>
             </div>
         </div>

@@ -5,10 +5,6 @@ import "./Nav.css";
 
 const Nav = ({ liens, profil, handleSubmit, favoris }) => {
   const { pathname } = useLocation();
-  let profilDeconnecte = {
-    nom: "",
-    mdp: "",
-  }
   return (
     <nav>
       <ul>
@@ -19,7 +15,7 @@ const Nav = ({ liens, profil, handleSubmit, favoris }) => {
         )}
       </ul>
       <Profil profil={profil} favoris={favoris}></Profil>
-      <button className='deconnexion' onClick={() => handleSubmit(profilDeconnecte, true)}>Déconnexion</button>
+      <button data-cy="button_deconnexion" className='deconnexion' onClick={() => handleSubmit("", true)}>Déconnexion</button>
     </nav >
   );
 };

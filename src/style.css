@@ -11,6 +11,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     --border: 1px solid var(--grisFonce);
     --blanc: #f0f6fc;
+    --erreur: #ff79797e;
     --couleur: #79c0ff;
     --grisPale: #c9d1d9;
     --grisFonce: #7d8590;
@@ -31,6 +32,10 @@ a:hover {
     text-decoration: underline;
 }
 
+input:focus{
+    border: 1px solid var(--grisPale);
+}
+
 .fondPale{
     background-color: var(--grisFonceTransparent);
 }
@@ -45,4 +50,17 @@ a:hover {
 
 .premiereMajuscule {
     text-transform: capitalize;
+}
+
+.erreur{
+    margin: 0.65em;
+    background: var(--erreur);
+    border: 1px solid var(--grisPale);
+    border-radius: 5px;
+    color: var(--grisPale);
+    text-align: center;
+}
+
+.none{
+    display: none;
 }

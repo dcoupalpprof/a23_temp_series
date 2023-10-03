@@ -3,7 +3,7 @@ import EnginRecherche from "./EnginRecherche";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
-const LayoutAuthentifie = ({ profil, handleSubmit, favoris, handleClick }) => {
+const LayoutAuthentifie = ({ favoris, profil, handleSubmit, handleClick }) => {
     return (
         <>
             <Nav

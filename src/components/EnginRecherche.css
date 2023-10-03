@@ -13,3 +13,13 @@
 .recherche button{
     padding: 0.5em;
 }
+
+.recherche button.off {
+    background: var(--noir);
+}
+
+.recherche button.off:hover {
+    border: 1px solid var(--grisFonce);
+    color: var(--grisFonce);
+    cursor: default;
+}

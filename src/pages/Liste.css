@@ -1,4 +1,4 @@
-.listeSeries{
+.listeSeries {
     padding-bottom: 100px;
 }
 
@@ -27,4 +27,14 @@
 
 .listeSeries img {
     width: 25%;
+}
+
+.rechercheImbriquee {
+    border: var(--border);
+    margin: 25px;
+}
+
+div.erreur {
+    padding: 1em;
+    margin: 1.6em;
 }
