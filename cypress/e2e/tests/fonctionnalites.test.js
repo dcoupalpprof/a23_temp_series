@@ -2,8 +2,8 @@
 
 describe("Fonctionnalités", () => {
     beforeEach(() => {
-        cy.intercept(Cypress.env('apiUrl'),
-            { fixture: 'series.json' });
+        // cy.intercept(Cypress.env('apiUrl'),
+        //     { fixture: 'series.json' });
         cy.login();
     });
 

@@ -2,8 +2,8 @@
 
 describe("Routes", () => {
     beforeEach(() => {
-        cy.intercept(Cypress.env('apiUrl'),
-            { fixture: 'series.json' });
+        // cy.intercept(Cypress.env('apiUrl'),
+        //     { fixture: 'series.json' });
     });
 
     it("Login", () => {
@@ -31,7 +31,7 @@ describe("Routes", () => {
     it("Trending - DetailsSerie", () => {
         cy.login();
         cy.get(".lien_details").first().click();
-        cy.get("main h1").should("have.text", "Gen V");
+        cy.get(".entete h1").should("have.text", "Sex Education");
     });
 
     it("Favorites - DetailsSerie", () => {
@@ -40,14 +40,15 @@ describe("Routes", () => {
         cy.get("[data-cy='button_favori']").click();
         cy.get("[data-cy='lien_Favoris']").click();
         cy.get(".lien_details").first().click();
-        cy.get("main h1").should("have.text", "Gen V");
+        cy.get(".entete h1").should("have.text", "Sex Education");
     });
     
     it("Recherche - DetailsSerie", () => {
         cy.login();
         cy.get("[data-cy='lien_Recherche']").click();
-        cy.get("[data-cy='input_recherche']").first().type("Gen V");
+        cy.get("[data-cy='input_recherche']").first().type("Sex Education");
+        cy.get(".recherche [data-cy=button_recherche]").first().click();
         cy.get(".lien_details").first().click();
-        cy.get("main h1").should("have.text", "Gen V");
+        cy.get(".entete h1").should("have.text", "Sex Education");
     });
 });
