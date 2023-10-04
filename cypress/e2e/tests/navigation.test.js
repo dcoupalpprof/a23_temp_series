@@ -1,49 +1,47 @@
 ///<reference types="cypress" />
 
-describe("Routes", () => {
-    beforeEach(() => {
-        // cy.intercept(Cypress.env('apiUrl'),
-        //     { fixture: 'series.json' });
-    });
+describe("Navigation", () => {
+    // before(() => {
+    //     cy.intercept(Cypress.env('apiUrl'),
+    //         { fixture: 'series.json' });
+    // });
 
-    it("Login", () => {
+    it("Lien vers la page Login", () => {
         cy.visit("/");
-        cy.get("h1").should("have.text", "Authentification");
+        cy.url().should("include", "login");
     });
 
-    it("Trending", () => {
+    it("Lien vers la page Trending", () => {
         cy.login();
         cy.url().should("include", "trending");
     });
 
-    it("Favorites", () => {
+    it("Lien vers la page Favorites", () => {
         cy.login();
         cy.get("[data-cy='lien_Favoris']").click();
         cy.url().should("include", "favorites");
     });
 
-    it("Recherche", () => {
+    it("Lien vers la page Recherche", () => {
         cy.login();
         cy.get("[data-cy='lien_Recherche']").click();
         cy.url().should("include", "recherche");
     });
 
-    it("Trending - DetailsSerie", () => {
+    it("Lien vers la page Trending - DetailsSerie", () => {
         cy.login();
         cy.get(".lien_details").first().click();
         cy.get(".entete h1").should("have.text", "Sex Education");
     });
 
-    it("Favorites - DetailsSerie", () => {
+    it("Lien vers la page Favorites - DetailsSerie", () => {
         cy.login();
-        cy.get(".lien_details").first().click();
-        cy.get("[data-cy='button_favori']").click();
-        cy.get("[data-cy='lien_Favoris']").click();
+        cy.favori();
         cy.get(".lien_details").first().click();
         cy.get(".entete h1").should("have.text", "Sex Education");
     });
-    
-    it("Recherche - DetailsSerie", () => {
+
+    it("Lien vers la page Recherche - DetailsSerie", () => {
         cy.login();
         cy.get("[data-cy='lien_Recherche']").click();
         cy.get("[data-cy='input_recherche']").first().type("Sex Education");

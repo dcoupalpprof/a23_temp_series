@@ -30,3 +30,9 @@ Cypress.Commands.add('login', () => {
     cy.get("[data-cy='input_mdp']").type("Dubuc");
     cy.get("[data-cy='button_connexion']").click();
 });
+
+Cypress.Commands.add('favori', () => {
+    cy.get(".lien_details").first().click();
+    cy.get("[data-cy='button_favori']").click();
+    cy.get("[data-cy='lien_Favoris']").click();
+});

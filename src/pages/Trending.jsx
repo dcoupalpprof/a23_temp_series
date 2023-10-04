@@ -1,5 +1,6 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ListeSeries from "./ListeSeries";
 import "./Liste.css";
 
 const Trending = () => {
@@ -12,25 +13,11 @@ const Trending = () => {
         };
         fetchSeries()
     }, []);
-    let { pathname } = useLocation();
-    pathname = pathname.replace("/trending/", "");
     return (
         <>
             <Outlet></Outlet>
             <div className='listeSeries'>
-                {
-                    series.map(({ id, poster, title, year, imdb }) => (
-                        <div key={id} className={id.toString() === pathname ? "on" : "off"}>
-                            <img src={poster} className="imgAffiche" />
-                            <div>
-                                <h2>{title}</h2>
-                                <p>{year}</p>
-                                <a href={imdb}>IMDB</a>
-                                <Link className="lien_details" to={`/trending/${id}`}>Détails</Link>
-                            </div>
-                        </div>
-                    ))
-                }
+                <ListeSeries series={series} lien="trending"></ListeSeries>
             </div>
         </>
     )

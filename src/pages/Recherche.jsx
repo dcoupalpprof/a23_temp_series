@@ -1,6 +1,7 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import EnginRecherche from "../components/EnginRecherche";
+import ListeSeries from "./ListeSeries";
 import "./Liste.css";
 
 const Recherche = ({ recherche, handleClick }) => {
@@ -8,8 +9,6 @@ const Recherche = ({ recherche, handleClick }) => {
         recherche = "api series search no result";
     }
     const [series, setSeries] = useState([]);
-    let { pathname } = useLocation();
-    pathname = pathname.replace("/recherche/", "");
     useEffect(() => {
         const fetchSeries = async () => {
             const resp = await fetch("http://localhost:3000/api/series/search?q=" + recherche);
@@ -23,19 +22,7 @@ const Recherche = ({ recherche, handleClick }) => {
             <>
                 <Outlet></Outlet>
                 <div className='listeSeries'>
-                    {
-                        series.map(({ id, poster, title, year, imdb }) => (
-                            <div key={id} className={id.toString() === pathname ? "on" : "off"}>
-                                <img src={poster} className="imgAffiche" />
-                                <div>
-                                    <h2>{title}</h2>
-                                    <p>{year}</p>
-                                    <a href={imdb}>IMDB</a>
-                                    <Link className="lien_details" to={`/recherche/${id}`}>Détails</Link>
-                                </div>
-                            </div>
-                        ))
-                    }
+                    <ListeSeries series={series} lien="recherche"></ListeSeries>
                 </div>
             </>
         )
