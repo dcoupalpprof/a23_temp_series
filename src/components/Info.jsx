@@ -23,7 +23,7 @@ const Info = ({ annee, imdb, synopsis, bandeAnnonce, rating, votes, langue, genr
         </div>
         <div className="fondPale">
             <h3>Liens externes</h3>
-            <a href={imdb}>Ouvrir le lien sur IMDB</a>
+            <a target="_blank" href={imdb}>Ouvrir le lien sur IMDB</a>
             <BandeAnnonce bandeAnnonce={bandeAnnonce}></BandeAnnonce>
         </div>
     </section>

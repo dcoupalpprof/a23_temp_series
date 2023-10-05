@@ -11,7 +11,7 @@ const ListeSeries = ({ series, lien }) => {
                 <div>
                     <h2>{title}</h2>
                     <p>{year}</p>
-                    <a href={imdb}>IMDB</a>
+                    <a target="_blank" href={imdb}>IMDB</a>
                     <Link className="lien_details" to={`/${lien}/${id}`}>Détails</Link>
                 </div>
             </div>

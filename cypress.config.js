@@ -8,7 +8,7 @@ export default defineConfig({
     baseUrl: 'http://127.0.0.1:5173',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     env: {
-      apiUrl: 'http://127.0.0.1:5173/api/series/trending'
+      apiUrl: 'http://localhost:3000/api/series/trending'
     }
   },
 });

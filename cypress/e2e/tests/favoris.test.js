@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Favoris", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     beforeEach(() => {
         cy.login();
@@ -24,6 +24,6 @@ describe("Favoris", () => {
         cy.favori();
         cy.get("[data-cy='button_deconnexion']").click();
         cy.login();
-        cy.get(".profil p").first().should('include', '0');
+        cy.get(".profil p").should('have.text', '0 ');
     });
 });

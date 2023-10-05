@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Recherche", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     beforeEach(() => {
         cy.login();

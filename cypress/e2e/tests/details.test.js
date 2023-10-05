@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Détails", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     beforeEach(() => {
         cy.login();
@@ -31,27 +31,27 @@ describe("Détails", () => {
 
     it("Affichage complet des détails", () => {
         cy.get(".lien_details").first().click();
-        cy.get(".entete h1").should("include", "Sex Education");
-        cy.get(".informations .info h2").should("include", "Synopsis");
-        cy.get(".informations .fondPale h3").first().should("include", "Genres");
-        cy.get(".informations .rating h3").first().should("include", "Classement global");
-        cy.get(".saisons h2").should("include", "Saisons");
+        cy.get(".entete h1").should("have.text", "Sex Education");
+        cy.get(".informations .info h2").should("have.text", "Synopsis");
+        cy.get(".informations .fondPale h3").first().should("have.text", "Genres");
+        cy.get(".informations .rating h3").first().should("have.text", "Classement global");
+        cy.get(".saisons h2").should("have.text", "Saisons");
     });
 
     it("Affichage de la bande-annonce", () => {
         cy.get(".lien_details").first().click();
-        cy.get(".bandeAnnonce a.ytp-title-link");
+        cy.get(".bandeAnnonce iframe");
     });
 
     it("Affichage du rating", () => {
         cy.get(".lien_details").first().click();
-        cy.get(".rating:first-child p:last-child").should("include", "4.1");
+        cy.get(".rating:first-child p:last-child").should("have.text", "4.1/5");
     });
 
     it("Évaluation de l'utilisateur", () => {
         cy.get(".lien_details").first().click();
         cy.get(".rating:last-child button").first().click();
-        cy.get(".rating:last-child p:last-child").should("include", "1.0");
+        cy.get(".rating:last-child p:last-child").should("have.text", "1.0/5");
     });
 
     it("Changement d'un favori", () => {

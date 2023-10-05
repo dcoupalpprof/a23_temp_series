@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Authentification", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     it("Route Login par défaut lorsque non connecté", () => {
         cy.visit("/");

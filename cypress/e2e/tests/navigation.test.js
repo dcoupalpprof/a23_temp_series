@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Navigation", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     it("Lien vers la page Login", () => {
         cy.visit("/");

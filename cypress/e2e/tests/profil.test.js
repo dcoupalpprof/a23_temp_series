@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 describe("Profil", () => {
-    // before(() => {
-    //     cy.intercept(Cypress.env('apiUrl'),
-    //         { fixture: 'series.json' });
-    // });
+    before(() => {
+        cy.intercept(Cypress.env('apiUrl'),
+            { fixture: 'series.json' });
+    });
 
     beforeEach(() => {
         cy.login();
@@ -16,6 +16,6 @@ describe("Profil", () => {
 
     it("Affichage du nombre de séries favorites", () => {
         cy.favori();
-        cy.get(".profil p").first().should('include', '1');
+        cy.get(".profil p").should('have.text', '1 ');
     });
 });
