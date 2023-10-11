@@ -1,17 +1,14 @@
 ///<reference types="cypress" />
 
 describe("Profil", () => {
-    before(() => {
+    beforeEach(() => {
         cy.intercept(Cypress.env('apiUrl'),
             { fixture: 'series.json' });
-    });
-
-    beforeEach(() => {
         cy.login();
     });
 
     it("Affichage du nom de l'utilisateur", () => {
-        cy.get(".profil h1").should('include', 'Viviane');
+        cy.get(".profil h1").should('have.text', 'Viviane');
     });
 
     it("Affichage du nombre de séries favorites", () => {

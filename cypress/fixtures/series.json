@@ -1,92 +1,95 @@
-[
-    {
-        "title": "Sex Education",
-        "year": 2019,
-        "id": 140590,
-        "slug": "sex-education",
-        "imdb": "https://www.imdb.com/title/tt7767422/",
-        "poster": "https://image.tmdb.org/t/p/w500/esUCvhY9yiH2MS45EPlgVbjmWBD.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/jKbqVjCOOL2P8cP1VNxbC2h31Re.jpg"
-    },
-    {
-        "title": "Only Murders in the Building",
-        "year": 2021,
-        "id": 165314,
-        "slug": "only-murders-in-the-building",
-        "imdb": "https://www.imdb.com/title/tt11691774/",
-        "poster": "https://image.tmdb.org/t/p/w500/yhx6PnU3L2a6FnEFGOlBKTZ8TSD.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/9JpYfnBOu5l9oBKvIZQovOXi8sy.jpg"
-    },
-    {
-        "title": "Gen V",
-        "year": 2023,
-        "id": 196842,
-        "slug": "gen-v",
-        "imdb": "https://www.imdb.com/title/tt13159924/",
-        "poster": "https://image.tmdb.org/t/p/w500/uuot1N5AgZ7xRCKgm4ZCwOhgIJu.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/ScaVfT5IkwVC3Edhmxqyl0GbK0.jpg"
-    },
-    {
-        "title": "Foundation",
-        "year": 2021,
-        "id": 150469,
-        "slug": "foundation-2021",
-        "imdb": "https://www.imdb.com/title/tt0804484/",
-        "poster": "https://image.tmdb.org/t/p/w500/1AZERr7KEJBpcchQ6vFcbUUC0Zw.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/oUisxaYRPuIehH6hkUIMcZNIuTA.jpg"
-    },
-    {
-        "title": "Ahsoka",
-        "year": 2023,
-        "id": 170559,
-        "slug": "ahsoka",
-        "imdb": "https://www.imdb.com/title/tt13622776/",
-        "poster": "https://image.tmdb.org/t/p/w500/laCJxobHoPVaLQTKxc14Y2zV64J.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/mvoW41kdSxiobGZ9ONL1Tqrpt3h.jpg"
-    },
-    {
-        "title": "The Walking Dead: Daryl Dixon",
-        "year": 2023,
-        "id": 198729,
-        "slug": "the-walking-dead-daryl-dixon",
-        "imdb": "https://www.imdb.com/title/tt13062500/",
-        "poster": "https://image.tmdb.org/t/p/w500/kdM24KINoAVK9wjCtDJCkdffEpc.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/fkeVnvxVx4x2PdDOOzSblFUGTVt.jpg"
-    },
-    {
-        "title": "The Big Bang Theory",
-        "year": 2007,
-        "id": 1409,
-        "slug": "the-big-bang-theory",
-        "imdb": "https://www.imdb.com/title/tt0898266/",
-        "poster": "https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/7RySzFeK3LPVMXcPtqfZnl6u4p1.jpg"
-    },
-    {
-        "title": "Billions",
-        "year": 2016,
-        "id": 77692,
-        "slug": "billions",
-        "imdb": "https://www.imdb.com/title/tt4270492/",
-        "poster": "https://image.tmdb.org/t/p/w500/edwYPQdZE998d748AdwWLsfy0rl.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/51Hw58fMwJQKYJ6XYJIRQBP9EPA.jpg"
-    },
-    {
-        "title": "The Wheel of Time",
-        "year": 2021,
-        "id": 140100,
-        "slug": "the-wheel-of-time",
-        "imdb": "https://www.imdb.com/title/tt7462410/",
-        "poster": "https://image.tmdb.org/t/p/w500/ihBi24EIr5kwAeY2PqmsgAcCj4n.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/oahCTL082gwu6fYrxEOBe546uvB.jpg"
-    },
-    {
-        "title": "The Continental: From the World of John Wick",
-        "year": 2023,
-        "id": 152252,
-        "slug": "the-continental-from-the-world-of-john-wick",
-        "imdb": "https://www.imdb.com/title/tt6486762/",
-        "poster": "https://image.tmdb.org/t/p/w500/9eGlSKQNrsEN9PXMcuWGtmCjvmc.jpg",
-        "backdrop": "https://image.tmdb.org/t/p/original/4DxHcIQfw3ungfQVqupJ8K62M3d.jpg"
-    }
-]
+{
+    "success": true,
+    "series": [
+        {
+            "title": "Sex Education",
+            "year": 2019,
+            "id": 140590,
+            "slug": "sex-education",
+            "imdb": "https://www.imdb.com/title/tt7767422/",
+            "poster": "https://image.tmdb.org/t/p/w500/esUCvhY9yiH2MS45EPlgVbjmWBD.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/jKbqVjCOOL2P8cP1VNxbC2h31Re.jpg"
+        },
+        {
+            "title": "Only Murders in the Building",
+            "year": 2021,
+            "id": 165314,
+            "slug": "only-murders-in-the-building",
+            "imdb": "https://www.imdb.com/title/tt11691774/",
+            "poster": "https://image.tmdb.org/t/p/w500/yhx6PnU3L2a6FnEFGOlBKTZ8TSD.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/9JpYfnBOu5l9oBKvIZQovOXi8sy.jpg"
+        },
+        {
+            "title": "Gen V",
+            "year": 2023,
+            "id": 196842,
+            "slug": "gen-v",
+            "imdb": "https://www.imdb.com/title/tt13159924/",
+            "poster": "https://image.tmdb.org/t/p/w500/uuot1N5AgZ7xRCKgm4ZCwOhgIJu.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/ScaVfT5IkwVC3Edhmxqyl0GbK0.jpg"
+        },
+        {
+            "title": "Foundation",
+            "year": 2021,
+            "id": 150469,
+            "slug": "foundation-2021",
+            "imdb": "https://www.imdb.com/title/tt0804484/",
+            "poster": "https://image.tmdb.org/t/p/w500/1AZERr7KEJBpcchQ6vFcbUUC0Zw.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/oUisxaYRPuIehH6hkUIMcZNIuTA.jpg"
+        },
+        {
+            "title": "Ahsoka",
+            "year": 2023,
+            "id": 170559,
+            "slug": "ahsoka",
+            "imdb": "https://www.imdb.com/title/tt13622776/",
+            "poster": "https://image.tmdb.org/t/p/w500/laCJxobHoPVaLQTKxc14Y2zV64J.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/mvoW41kdSxiobGZ9ONL1Tqrpt3h.jpg"
+        },
+        {
+            "title": "The Walking Dead: Daryl Dixon",
+            "year": 2023,
+            "id": 198729,
+            "slug": "the-walking-dead-daryl-dixon",
+            "imdb": "https://www.imdb.com/title/tt13062500/",
+            "poster": "https://image.tmdb.org/t/p/w500/kdM24KINoAVK9wjCtDJCkdffEpc.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/fkeVnvxVx4x2PdDOOzSblFUGTVt.jpg"
+        },
+        {
+            "title": "The Big Bang Theory",
+            "year": 2007,
+            "id": 1409,
+            "slug": "the-big-bang-theory",
+            "imdb": "https://www.imdb.com/title/tt0898266/",
+            "poster": "https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/7RySzFeK3LPVMXcPtqfZnl6u4p1.jpg"
+        },
+        {
+            "title": "Billions",
+            "year": 2016,
+            "id": 77692,
+            "slug": "billions",
+            "imdb": "https://www.imdb.com/title/tt4270492/",
+            "poster": "https://image.tmdb.org/t/p/w500/edwYPQdZE998d748AdwWLsfy0rl.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/51Hw58fMwJQKYJ6XYJIRQBP9EPA.jpg"
+        },
+        {
+            "title": "The Wheel of Time",
+            "year": 2021,
+            "id": 140100,
+            "slug": "the-wheel-of-time",
+            "imdb": "https://www.imdb.com/title/tt7462410/",
+            "poster": "https://image.tmdb.org/t/p/w500/ihBi24EIr5kwAeY2PqmsgAcCj4n.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/oahCTL082gwu6fYrxEOBe546uvB.jpg"
+        },
+        {
+            "title": "The Continental: From the World of John Wick",
+            "year": 2023,
+            "id": 152252,
+            "slug": "the-continental-from-the-world-of-john-wick",
+            "imdb": "https://www.imdb.com/title/tt6486762/",
+            "poster": "https://image.tmdb.org/t/p/w500/9eGlSKQNrsEN9PXMcuWGtmCjvmc.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/4DxHcIQfw3ungfQVqupJ8K62M3d.jpg"
+        }
+    ]
+}

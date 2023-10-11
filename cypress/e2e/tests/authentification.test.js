@@ -1,7 +1,7 @@
 ///<reference types="cypress" />
 
 describe("Authentification", () => {
-    before(() => {
+    beforeEach(() => {
         cy.intercept(Cypress.env('apiUrl'),
             { fixture: 'series.json' });
     });

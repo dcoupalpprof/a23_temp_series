@@ -27,6 +27,7 @@
 
 .listeSeries img {
     width: 25%;
+    height: fit-content;
 }
 
 .rechercheImbriquee {

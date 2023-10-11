@@ -1,12 +1,9 @@
 ///<reference types="cypress" />
 
 describe("Détails", () => {
-    before(() => {
+    beforeEach(() => {
         cy.intercept(Cypress.env('apiUrl'),
             { fixture: 'series.json' });
-    });
-
-    beforeEach(() => {
         cy.login();
     });
 

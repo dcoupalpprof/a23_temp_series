@@ -1,7 +1,7 @@
 ///<reference types="cypress" />
 
 describe("Navigation", () => {
-    before(() => {
+    beforeEach(() => {
         cy.intercept(Cypress.env('apiUrl'),
             { fixture: 'series.json' });
     });
